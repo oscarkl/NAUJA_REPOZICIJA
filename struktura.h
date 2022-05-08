@@ -24,6 +24,9 @@ public:
     const std::string& pavardes() const { return pavarde; }
     const std::vector<double>& pazym() const { return n; }
     double egzas() const { return gal; }
+    studentas(const studentas& source);//kopijuot konstruktoriu
+    studentas& operator=(const studentas& source);//overloadint
+    ~studentas();//destruktorius
 };
 
 studentas skaitymas(std::ifstream& fd);
