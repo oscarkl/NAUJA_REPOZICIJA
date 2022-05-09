@@ -1,7 +1,7 @@
-Pirmoji Užduotis - v1.0  
+Pirmoji Užduotis - v1.1  
 ====
 
-Aprašymas v1.0  
+Aprašymas v1.1  
 ==
 Ši programa paėma studento vardą, pavardę, namų darbų rezultatus ir egzamino rezultatą iš teksto failo ir apskaičiuoją vidurkį pagal šią formulę  
 GalutinisVid = 0.4 * vidurkis + 0.6 egzaminas  
