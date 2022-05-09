@@ -56,3 +56,32 @@ void RemoveRezult(std::vector<studentas>& ab) {
             }),
         ab.end());
 }
+//copy constructor
+
+studentas::studentas(const studentas& source) {
+    vardas = source.vardas;
+    pavarde = source.pavarde;   
+    gal = source.gal;    
+    n = source.n;
+}
+//overload assignment operator 
+
+studentas& studentas::operator=(const studentas& source) {
+    if (this == &source) {
+        return *this;
+    }
+    vardas = source.vardas;
+    pavarde = source.pavarde;
+    gal = source.gal;
+    n = source.n;
+    return *this;
+}
+studentas::~studentas() {
+    n.clear();
+}
+int leftshift(unsigned char b){
+    return (b << 1);
+}
+int rightshift(unsigned char b) {
+    return (b >> 1);
+}
