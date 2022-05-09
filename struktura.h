@@ -24,13 +24,16 @@ public:
     const std::string& pavardes() const { return pavarde; }
     const std::vector<double>& pazym() const { return n; }
     double egzas() const { return gal; }
-    studentas(const studentas& source);//kopijuot konstruktoriu
-    studentas& operator=(const studentas& source);//overloadint
-    ~studentas();//destruktorius
+    studentas(const studentas& source);
+    studentas& operator=(const studentas& source);
+    ~studentas();
 };
+
 
 studentas skaitymas(std::ifstream& fd);
 bool rusiavimas(const studentas& lhs, const studentas& rhs);
 bool compare_5(const studentas& v);
 void RemoveRezult(std::vector<studentas>& ab);
 bool isNumber(const std::string& str);
+int leftshift(unsigned char b);
+int rightshift(unsigned char b);
