@@ -49,5 +49,20 @@ Visos programos veikimo laikas
           Klases          Strukturos
 1mil      2.4             2.107
 100k      0.244           0.211
+</pre>
 
-išvada - strukturos greitesnes uz klase
+Palyginimas Flagų
+--
+<pre>
+          class		struct
+	          1mil	
+o1         2.49		2.11
+02         2.389	          2.103
+o3         2.419	          2.139
+
+	          100k		
+o3        0.244	          0.225
+o2        0.249	          0.205
+o1        0.246	          0.209
+
+išvada - strukturos (bent mano naudojimas) greitesnes uz klase
