@@ -25,7 +25,7 @@ void input(int& o) {
             cout << "(3) 100000" << endl;
             cout << "(4) 1000000" << endl;
             cout << "(5) 10000000" << endl;
-            o = 4;
+            o = 3;
         }
     }
     string name = "Kurstiokai.txt";
@@ -41,7 +41,6 @@ void input(int& o) {
         else {
             string data;
             getline(fd, data);
-            //int i = 0;
             for (int i = 0; i< int(1000 * pow(10, o - 1)); i++) {
                 rezult.push_back(skaitymas(fd));                
             }
@@ -54,16 +53,15 @@ void output(int o) {
     auto is = chrono::high_resolution_clock::now();
     //vector<studentas> kietiakai;
     vector<studentas> nevyk;
+    
     sort(rezult.begin(), rezult.end(), rusiavimas);
     for (auto& stud : rezult) {
         if (compare_5(stud)) {
-            nevyk.push_back(stud);
+            nevyk.push_back(stud);            
         }
     }
+    //cout << leftshift(rezult[1].egzas());
     RemoveRezult(rezult);
-    //cout << rezult.size();
-    //rezult.clear();
-
     auto out = chrono::high_resolution_clock::now();
     auto durt = chrono::duration_cast<chrono::microseconds>(out - is);
     durs = durt.count();
