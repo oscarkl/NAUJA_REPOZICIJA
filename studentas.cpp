@@ -79,9 +79,3 @@ studentas& studentas::operator=(const studentas& source) {
 studentas::~studentas() {
     n.clear();
 }
-int leftshift(unsigned char b){
-    return (b << 1);
-}
-int rightshift(unsigned char b) {
-    return (b >> 1);
-}
