@@ -10,7 +10,14 @@
 #include <sstream>
 #include <algorithm>
 #include <chrono>
-class studentas {
+
+class zmogus {
+public:
+    virtual const std::string& vardai() const = 0;
+    virtual const std::string& pavardes() const = 0;
+};
+
+class studentas : public zmogus {
 private:
     std::string vardas;
     std::string pavarde;
@@ -35,5 +42,3 @@ bool rusiavimas(const studentas& lhs, const studentas& rhs);
 bool compare_5(const studentas& v);
 void RemoveRezult(std::vector<studentas>& ab);
 bool isNumber(const std::string& str);
-int leftshift(unsigned char b);
-int rightshift(unsigned char b);
