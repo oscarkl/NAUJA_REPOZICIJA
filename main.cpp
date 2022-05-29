@@ -8,7 +8,7 @@ double duro;
 
 using namespace std;
 
-vector<studentas> rezult;
+std::vector<studentas> rezult;
 
 double dur[5];
 
@@ -52,16 +52,17 @@ void input(int& o) {
 void output(int o) {
     auto is = chrono::high_resolution_clock::now();
     //vector<studentas> kietiakai;
-    vector<studentas> nevyk;
-    
-    sort(rezult.begin(), rezult.end(), rusiavimas);
-    for (auto& stud : rezult) {
-        if (compare_5(stud)) {
-            nevyk.push_back(stud);            
-        }
-    }
+    std::vector<studentas> nevyk;
+    Vektorius<int> trys(3);
+    //cout << trys[0];
+    //sort(rezult.begin(), rezult.end(), rusiavimas);
+    //for (auto& stud : rezult) {
+        //if (compare_5(stud)) {
+           // nevyk.push_back(stud);            
+        //}
+  //  }
     //cout << leftshift(rezult[1].egzas());
-    RemoveRezult(rezult);
+    //RemoveRezult(rezult);
     auto out = chrono::high_resolution_clock::now();
     auto durt = chrono::duration_cast<chrono::microseconds>(out - is);
     durs = durt.count();
@@ -73,7 +74,7 @@ void output(int o) {
 
 void filegen() {
     string vardas, pavarde;
-    int n[5];
+    double n[5];
     string name;
     int skai;
     for (int i = 0; i < 5; i++) {
@@ -89,6 +90,7 @@ void filegen() {
             for (int k = 0; k < 5; k++) {
                 n[k]=rand() % 10 + 1;
             }
+            //studentas o(vardas, pavarde, n[3], n);
             fr << left << setw(16) << vardas << left << setw(16) << pavarde << left << setw(8) << n[0] << left << setw(8) << n[1] << left << setw(8) << n[2] << left << setw(8) << n[3] << left << setw(8) << n[4] << "\n";
         }
         auto stop = chrono::high_resolution_clock::now();
