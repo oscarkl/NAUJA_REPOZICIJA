@@ -1,5 +1,5 @@
 #include "struktura.h"
-
+#include "vektorius.h"
 int sk;
 int counter = 0;
 double durs;
@@ -8,7 +8,7 @@ double duro;
 
 using namespace std;
 
-std::vector<studentas> rezult;
+Vektorius<studentas> rezult;
 
 double dur[5];
 
@@ -52,15 +52,14 @@ void input(int& o) {
 void output(int o) {
     auto is = chrono::high_resolution_clock::now();
     //vector<studentas> kietiakai;
-    std::vector<studentas> nevyk;
-    Vektorius<int> trys(3);
-    //cout << trys[0];
-    //sort(rezult.begin(), rezult.end(), rusiavimas);
-    //for (auto& stud : rezult) {
-        //if (compare_5(stud)) {
-           // nevyk.push_back(stud);            
-        //}
-  //  }
+    Vektorius<studentas> nevyk;
+    
+    sort(rezult.begin(), rezult.end(), rusiavimas);
+    for (auto& stud : rezult) {
+        if (compare_5(stud)) {
+            nevyk.push_back(stud);            
+        }
+    }
     //cout << leftshift(rezult[1].egzas());
     //RemoveRezult(rezult);
     auto out = chrono::high_resolution_clock::now();
