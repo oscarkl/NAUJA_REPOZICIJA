@@ -10,6 +10,7 @@
 #include <sstream>
 #include <algorithm>
 #include <chrono>
+#include "vektorius.h"
 
 class zmogus {
 public:
@@ -22,23 +23,24 @@ private:
     std::string vardas;
     std::string pavarde;
     double gal;
-    std::vector<double> n;
+    Vektorius<double> n;
     
 public:
     studentas() : vardas(), pavarde(), gal(), n() { }
-    studentas(const std::string& vardas, const std::string& pavarde, double gal, const std::vector<double>& n) : vardas(vardas), pavarde(pavarde), gal(gal), n(n) {}
+    studentas(const std::string& vardas, const std::string& pavarde, double gal, const Vektorius<double>& n) : vardas(vardas), pavarde(pavarde), gal(gal), n(n) {}
     const std::string& vardai() const { return vardas; }
     const std::string& pavardes() const { return pavarde; }
-    const std::vector<double>& pazym() const { return n; }
+    const Vektorius<double>& pazym() const { return n; }
     double egzas() const { return gal; }
     studentas(const studentas& source);
-    studentas& operator=(const studentas& source);
+    studentas& operator=(const studentas& source);    
     ~studentas();
+    friend std::ostream& operator<<(std::ostream& os, const studentas& source);
 };
 
 
 studentas skaitymas(std::ifstream& fd);
 bool rusiavimas(const studentas& lhs, const studentas& rhs);
 bool compare_5(const studentas& v);
-void RemoveRezult(std::vector<studentas>& ab);
+void RemoveRezult(Vektorius<studentas>& ab);
 bool isNumber(const std::string& str);
