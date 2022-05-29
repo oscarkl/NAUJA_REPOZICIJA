@@ -8,16 +8,16 @@ bool isNumber(const std::string& str)
     return true;
 }
 
-double vidurkis(const std::vector<double>&h) {
+double vidurkis(const Vektorius<double>&h) {
     double sum = 0;
     for (auto pazymys : h)
     {
         sum += pazymys;
     }
-    return sum / h.size();
+    return sum / h.Size();
 }
 
-double egz(double vid, const std::vector<double>&h) {
+double egz(double vid, const Vektorius<double>&h) {
     double egzas = 0.6 * h.back() + 0.4 * vidurkis(h);
     return egzas;
 }
@@ -26,7 +26,7 @@ studentas skaitymas(std::ifstream& fd)
 {
     std::string data, vard, pav;
     int sk;
-    std::vector<double> h;
+    Vektorius<double> h;
     double gal;
     fd >> vard;
     fd >> pav;
@@ -48,14 +48,14 @@ bool rusiavimas(const studentas&lhs, const studentas&rhs) {
 }
 
 bool compare_5(const studentas& v) { return v.egzas() < 5; }
-
-void RemoveRezult(std::vector<studentas>& ab) {
+/*
+void RemoveRezult(Vektorius<studentas>& ab) {
     ab.erase(
         std::remove_if(ab.begin(), ab.end(), [&](studentas const& ab) {
             return compare_5(ab);
             }),
         ab.end());
-}
+}*/
 //copy constructor
 
 studentas::studentas(const studentas& source) {
@@ -78,4 +78,13 @@ studentas& studentas::operator=(const studentas& source) {
 }
 studentas::~studentas() {
     n.clear();
+}
+std::ostream& operator<<(std::ostream& fr, const studentas& source)
+{
+    fr << std::left << std::setw(16) << source.vardas << std::left << std::setw(16) << source.pavarde;
+    for (int i = 0; i < source.n.Size(); i++) {
+        fr << std::left << std::setw(8) << source.n[i] << " ";
+    }
+    fr << source.gal << std::endl;
+    return fr;
 }
