@@ -1,8 +1,9 @@
-Pirmoji Užduotis - v1.0  
+Antroji Užduotis - v1.5  
 ====
 
-Aprašymas v1.0  
+Aprašymas v1.5  
 ==
+Sukurta Bazinė klasė žmogus kuri yra abstrakčioji
 Ši programa paėma studento vardą, pavardę, namų darbų rezultatus ir egzamino rezultatą iš teksto failo ir apskaičiuoją vidurkį pagal šią formulę  
 GalutinisVid = 0.4 * vidurkis + 0.6 egzaminas  
 Taip pat galutinis vidurkis yra skaičiuojamas pagal medianą;  
@@ -39,15 +40,3 @@ Programos naudojimo gidas:
 3. jei pasirinkta generuoti tai sugeneruos 5 naujus failus su dydžiais nuo 1000 iki 10000000
 4. Programa nuskaičius faila surušiuoja viską ir atspausdina duomenis i **"kietekai.txt"** ir **"nevykeliai.txt"** failus
 5. išspausdina skaitymą iš failo, rūšiavimą studentų, spausdinimą studentų bei visos programos veikimo laikus
-
-Palyginimas klases ir strukturu su 100k ir 1mil dydžio failu
-==
-
-Visos programos veikimo laikas
----
-<pre>
-          Klases          Strukturos
-1mil      2.4             2.107
-100k      0.244           0.211
-
-išvada - strukturos greitesnes uz klase
