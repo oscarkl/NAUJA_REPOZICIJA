@@ -1,8 +1,9 @@
-Pirmoji Užduotis - v1.0  
+Pirmoji Užduotis - v1.2  
 ====
 
-Aprašymas v1.0  
+Aprašymas v1.2  
 ==
+Klasėse realizuota Rule of Three
 Ši programa paėma studento vardą, pavardę, namų darbų rezultatus ir egzamino rezultatą iš teksto failo ir apskaičiuoją vidurkį pagal šią formulę  
 GalutinisVid = 0.4 * vidurkis + 0.6 egzaminas  
 Taip pat galutinis vidurkis yra skaičiuojamas pagal medianą;  
@@ -11,6 +12,7 @@ Teksto failą gailma naujai sugeneruoti ir tai sukurs 5 failus su dydžiais nuo 
 Programa gavus visus duomenis išrūšiuoja studentus į dvi grupes: kietiakai ir nevykeliai ir tada juos išspausdina i 2 atskirus failus su studento vardu, pavardę ir abiejais galutinio vidurkio variantais  
 Vietoj to, kad sukurt 2 naujus vektorius (ar list, ar deque) sukuriamas tik naujas 1 kuris laiko nevykelius ir iš pagrindinio jie ištrinami, paliekant tik kietekus
 Taip pat ekrane spausdina programos veikimo laiką bei išskirsto jį į generavimą failų, skaitymą iš failo, rusiavima vektoriaus į dvi grupes, spausdinimą failo, visos programos veikimo laika  
+pridėtas spausdymo operatorius
 
 Failai 
 ==
@@ -27,9 +29,8 @@ Kuriame viskas saugoma yra vektoriuose.
 **100000.txt** 100000 studentų dydžio sugeneruotas failas  
 **1000000.txt** 1000000 studentų dydžio sugeneruotas failas  
 **10000000.txt**10000000 studentų dydžio sugeneruotas failas  
-**vector.cpp** - main.cpp bet išimta įvesčių prašymas vykdymo laikui nepakeist  
-**list.cpp** - vector.cpp bet vietoj vektoriu naudojama list  
-**deque.cpp** - vector.cpp bet vietoj vektoriu naudojama deque 
+**main.cpp** - main.cpp
+
 
 Instrukcijos 
 ==
@@ -40,14 +41,4 @@ Programos naudojimo gidas:
 4. Programa nuskaičius faila surušiuoja viską ir atspausdina duomenis i **"kietekai.txt"** ir **"nevykeliai.txt"** failus
 5. išspausdina skaitymą iš failo, rūšiavimą studentų, spausdinimą studentų bei visos programos veikimo laikus
 
-Palyginimas klases ir strukturu su 100k ir 1mil dydžio failu
-==
-
-Visos programos veikimo laikas
----
-<pre>
-          Klases          Strukturos
-1mil      2.4             2.107
-100k      0.244           0.211
-
-išvada - strukturos greitesnes uz klase
+Išvada - programa lėčiau veikia naudojant rule of three kadangi ilgiau uztrunka kopijavimui
