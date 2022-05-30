@@ -3,6 +3,7 @@ Pirmoji Užduotis - v1.1
 
 Aprašymas v1.1  
 ==
+Naudojame class vietoj struct
 Ši programa paėma studento vardą, pavardę, namų darbų rezultatus ir egzamino rezultatą iš teksto failo ir apskaičiuoją vidurkį pagal šią formulę  
 GalutinisVid = 0.4 * vidurkis + 0.6 egzaminas  
 Taip pat galutinis vidurkis yra skaičiuojamas pagal medianą;  
@@ -27,9 +28,7 @@ Kuriame viskas saugoma yra vektoriuose.
 **100000.txt** 100000 studentų dydžio sugeneruotas failas  
 **1000000.txt** 1000000 studentų dydžio sugeneruotas failas  
 **10000000.txt**10000000 studentų dydžio sugeneruotas failas  
-**vector.cpp** - main.cpp bet išimta įvesčių prašymas vykdymo laikui nepakeist  
-**list.cpp** - vector.cpp bet vietoj vektoriu naudojama list  
-**deque.cpp** - vector.cpp bet vietoj vektoriu naudojama deque 
+**main.cpp** - main.cpp bet išimta įvesčių prašymas vykdymo laikui nepakeist  
 
 Instrukcijos 
 ==
