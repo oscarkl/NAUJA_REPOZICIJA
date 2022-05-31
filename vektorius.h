@@ -142,6 +142,38 @@ public:
     {
         return Data[Size - 1];
     }
+    T& at(int index) {//access element
+        return Data[index];
+    }
+
+    void insert(int index, T value)
+    {
+
+        if (Size != capacity) {
+            for (int i = Size - 1; i >= index; i--) {
+                Data[i + 1] = Data[i];
+            }
+            Data[index] = value;
+            Size++;
+        }
+        else {
+            capacity *= 2;
+            T* newarr = new T[capacity];
+            for (int i = 0; i < Size; i++) {
+                newarr[i] =Data[i];
+            }
+            delete[] Data;
+            Data = newarr;
+            insert(index, value);
+        }
+    }
+    void erase(int index)
+    {
+        for (int i = index; i < Size - 1; i++) {
+            Data[i] = Data[i + 1];
+        }
+        Size--;
+    }
 
     const T* data() const //pointer to container
     {
@@ -166,7 +198,7 @@ public:
             return false;
     }
 
-    void PopBack()
+    void pop_back()
     {
         if (Size > 0)
         {
