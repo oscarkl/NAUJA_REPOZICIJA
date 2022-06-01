@@ -17,7 +17,7 @@ Testavimas
     p.insert(1,5);
     cout<<p[1]<<" "<<p[2];
     p.pop_back();
-    cout<<p.size()
+    cout<<p.size();
     p.erase(0);
     cout<<p[0];
           
@@ -33,7 +33,7 @@ Testavimas
     p.insert(1,5);
     cout<<p[1]<<" "<<p[2];
     p.pop_back();
-    cout<<p.size()
+    cout<<p.size();
     p.erase(0);
     cout<<p[0];
     
