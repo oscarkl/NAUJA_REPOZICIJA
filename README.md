@@ -27,7 +27,7 @@ Testavimas
     vector<int> v;
     v.push_back(3);
     std::cout << v.size();
-    std::vector<int> p=v;
+    vector<int> p=v;
     cout<<p[0];
     p.push_back(4);
     p.insert(1,5);
