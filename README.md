@@ -14,11 +14,13 @@ Testavimas
     cout<<"p[0] " << p[0]<<endl;
     p.push_back(4);
     p.insert(p.begin()+1, 5);
-    cout <<"p[1] p[2] " << p[1] << " " << p[2] << endl;;
+    cout <<"p[1] p[2] " << p[1] << " " << p[2] << endl;
     p.pop_back();
     cout<<"p.size() "<< p.size()<<endl;
     p.erase(p.begin());
     cout<<"p[0]" << p[0]<<endl;
+    p.clear();
+    cout<<"p.clear() size " << p.size()<<endl;
           
           
 --Mano vektorius
@@ -30,11 +32,13 @@ Testavimas
     cout<<"p[0] " << p[0]<<endl;
     p.push_back(4);
     p.insert(1, 5);
-    cout <<"p[1] p[2] " << p[1] << " " << p[2] << endl;;
+    cout <<"p[1] p[2] " << p[1] << " " << p[2] << endl;
     p.pop_back();
     cout<<"p.size() "<< p.size()<<endl;
     p.erase(0);
     cout<<"p[0]" << p[0]<<endl;
+    p.clear();
+    cout<<"p.clear() size " << p.size()<<endl;
     
 rezultatai gaunami tie patys;
 
